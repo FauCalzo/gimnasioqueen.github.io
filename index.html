@@ -1,541 +1,372 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Gimnasio Queen | Fuerza, cardio y bienestar en tu barrio</title>
-<meta content="Gimnasio Queen: musculación, funcional, HIIT, spinning y ritmos. Planes flexibles, profesores certificados y horarios amplios. ¡Probá una clase gratis!" name="description"/>
-<meta content="Gimnasio Queen" property="og:title">
-<meta content="Musculación, funcional, HIIT y más. ¡Sumate hoy!" property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://tu-dominio.com/og.jpg" property="og:image"/>
-<meta content="https://tu-dominio.com" property="og:url"/>
-<link href="favicon.ico" rel="icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="Gimnasio Queen: musculación, funcional, HIIT, spinning y ritmos. Planes flexibles, profesores certificados y horarios amplios. ¡Probá una clase gratis!"/>
+<meta property="og:title" content="Gimnasio Queen">
+<meta property="og:description" content="Musculación, funcional, HIIT y más. ¡Sumate hoy!"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://tu-dominio.com/og.jpg"/>
+<meta property="og:url" content="https://tu-dominio.com"/>
+<link rel="icon" href="favicon.ico"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+
 <style>
-    :root{
-      --brand:#6fa7da; /* celeste */
-      --brand-dark:#0369a1;
-      --ink:#0f172a;
-      --muted:#475569;
-      --bg:#0b1020;
-      --card:#0f1630;
-      --ring:#22d3ee;
-      --ok:#22c55e;
-      --danger:#ef4444;
-      --max:1100px;
-      --radius:14px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg,#395d7d,#0b1020 75%);color:#e5e7eb;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:var(--max);margin:auto;padding:0 20px}
-    header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(6,9,20,.7);backdrop-filter:saturate(180%) blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.07)
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
-    .brand span{font-family:"Bebas Neue", Inter;font-size:28px;line-height:1}
-    .badge{font-size:15px;padding:3px 8px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#cbd5e1}
-    .menu{display:flex;gap:18px;align-items:center}
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      background:var(--brand);border:1px solid rgba(255,255,255,.08);
-      padding:10px 16px;border-radius:12px;font-weight:700;color:#021018
-    }
-    .btn:hover{background:var(--brand-dark)}
-    .ghost{background:transparent;border:1px solid rgba(255,255,255,.15);color:#e5e7eb}
-    .hero{padding:72px 0}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-    .kicker{color:#9ca3af;text-transform:uppercase;letter-spacing:.2em;font-size:18px}
-    h1{font-size:60px;margin:10px 0 16px;line-height:1.05;letter-spacing:-.5px}
-    p{color:#cbd5e1}
-    .hero-card{
-      background:radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.25), transparent 40%), var(--card);
-      border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px
-    }
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .stat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;text-align:center}
-    .stat b{display:block;font-size:24px}
-    section{padding:42px 0}
-    .section-title{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
-    .title{font-size:28px;font-weight:800}
-    .grid{display:grid;gap:18px}
-    .cards{grid-template-columns:repeat(3,1fr)}
-    .card{
-      background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px
-    }
-    #contacto .card p {
-  font-size: 18px; /* o el tamaño que quieras */
-  line-height: 1.4; /* para que respire un poco */
-}
-    .pill{font-size:12px;border:1px solid rgba(255,255,255,.15);padding:4px 10px;border-radius:999px;display:inline-block;color:#bcd7ff}
-    .price{font-size:34px;font-weight:800}
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
-    th{color:#a5b4fc;font-weight:700}
-    .trainers{grid-template-columns:repeat(4,1fr)}
-    .trainer img{border-radius:12px;border:1px solid rgba(255,255,255,.1)}
-    .faq-item{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px}
-    details summary{cursor:pointer;font-weight:700;list-style:none}
-    details summary::-webkit-details-marker{display:none}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    input,textarea,select{
-      width:100%;padding:12px;border-radius:12px;background:#0a1229;color:#e5e7eb;
-      border:1px solid rgba(255,255,255,.12)
-    }
-    label{font-size:13px;color:#a1a1aa}
-    footer{padding:28px 0;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08);margin-top:42px}
-    .map{border:0;border-radius:12px;height:320px;width:100%}
-    @media (max-width:960px){
-      .hero-grid{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr}
-      .trainers{grid-template-columns:1fr 1fr}
-      .contact-grid{grid-template-columns:1fr}
-      .menu{display:none}
-      .menu.open{display:flex;flex-direction:column;align-items:flex-start;padding:10px 0}
-      h1{font-size:36px}
-    }
-  
-/* ===== Horarios: cards por día ===== */
-.hint{margin:0 0 10px;color:#9ca3af}
-.day-cards{gap:14px}
-.day{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08)}
-.day .day-title{margin:0 0 8px;font-size:18px;font-weight:800;color:#a5b4fc}
-.blocks {
-  display:grid;
-  gap:6px;
-  margin-bottom:8px;
-}
-.block.sala{
-  background: rgba(34,197,94,.12);
-  border:1px solid rgba(34,197,94,.28);
-  color:#d1fae5;
-  padding:8px 10px;
-  border-radius:10px;
-  font-size:13px;
-  font-weight:700;
+  :root{
+    --brand:#6fa7da; --brand-dark:#0369a1; --ink:#0f172a; --muted:#475569;
+    --bg:#0b1020; --card:#0f1630; --ring:#22d3ee; --ok:#22c55e; --danger:#ef4444;
+    --max:1100px; --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:linear-gradient(180deg,#395d7d,#0b1020 75%);color:#e5e7eb;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block;height:auto}
+  .container{max-width:var(--max);margin:auto;padding:0 20px}
 
-  display:flex;
-  flex-direction:column;   /* nombre arriba, horario abajo */
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap:4px;
-}
+  /* Header & Nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(6,9,20,.7);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;position:relative}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+  .brand span{font-family:"Bebas Neue", Inter;font-size:28px;line-height:1}
+  .badge{font-size:15px;padding:6px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#cbd5e1}
+  .menu{display:flex;gap:18px;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);border:1px solid rgba(255,255,255,.08);padding:10px 16px;border-radius:12px;font-weight:700;color:#021018}
+  .btn:hover{background:var(--brand-dark)}
+  .ghost{background:transparent;border:1px solid rgba(255,255,255,.15);color:#e5e7eb}
 
-.block.sala .hora{
-  font-weight:700;         /* también en negrita */
-}
-.class-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
-.class-list li{
-  display:flex;
-  flex-direction:column;      
-  align-items:center;         
-  justify-content:center;     
-  background:rgba(59,130,246,.10);
-  border:1px solid rgba(59,130,246,.25);
-  padding:10px 12px;
-  border-radius:10px;
-  text-align:center;
-  gap:4px;                    
-  font-size:13px;             /* mismo tamaño que Musculación */
-  font-weight:700;            /* negrita en ambos */
-}
+  /* Hero */
+  .hero{padding:72px 0}
+  .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+  .kicker{color:#9ca3af;text-transform:uppercase;letter-spacing:.2em;font-size:18px}
+  h1{font-size:clamp(32px,6vw,60px);margin:10px 0 16px;line-height:1.05;letter-spacing:-.5px}
+  p{color:#cbd5e1}
+  .hero-card{background:radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.25), transparent 40%), var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px}
 
-.class-list li .act{
-  order: -1;                  /* actividad arriba */
-  color:#dbeafe;
-}
+  /* Media wrappers to avoid zooming */
+  .media-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden}
+  .media-wrap > *{position:absolute;inset:0;width:100%;height:100%}
 
-.class-list li .t{
-  font-variant-numeric:tabular-nums;
-  color:#e0e7ff;
-}
-@media(max-width:1100px){.day-cards{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:800px){.day-cards{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.day-cards{grid-template-columns:1fr}}
+  /* Shared */
+  section{padding:42px 0}
+  .section-title{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+  .title{font-size:28px;font-weight:800}
 
+  .grid{display:grid;gap:18px}
+  /* Using auto-fit to keep a single consistent size and wrap instead of shrinking too much */
+  .cards{grid-template-columns:repeat(auto-fit, minmax(260px, 1fr))}
+  .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
+
+  #contacto .card p {font-size:18px;line-height:1.4}
+  .pill{font-size:12px;border:1px solid rgba(255,255,255,.15);padding:4px 10px;border-radius:999px;display:inline-block;color:#bcd7ff}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}
+  th{color:#a5b4fc;font-weight:700}
+  .trainers{grid-template-columns:repeat(auto-fit, minmax(240px, 1fr))}
+  .trainer img{border-radius:12px;border:1px solid rgba(255,255,255,.1)}
+  footer{padding:28px 0;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08);margin-top:42px}
+  .map{border:0;border-radius:12px;width:100%;height:100%}
+
+  /* Horarios */
+  .hint{margin:0 0 10px;color:#9ca3af}
+  .day-cards{gap:14px;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr))}
+  .day{background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08)}
+  .day .day-title{margin:0 0 8px;font-size:18px;font-weight:800;color:#a5b4fc}
+  .blocks{display:grid;gap:6px;margin-bottom:8px}
+  .block.sala{background: rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.28);color:#d1fae5;padding:8px 10px;border-radius:10px;font-size:13px;font-weight:700;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px}
+  .block.sala .hora{font-weight:700}
+  .class-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+  .class-list li{display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(59,130,246,.10);border:1px solid rgba(59,130,246,.25);padding:10px 12px;border-radius:10px;text-align:center;gap:4px;font-size:13px;font-weight:700}
+  .class-list li .act{order:-1;color:#dbeafe}
+  .class-list li .t{font-variant-numeric:tabular-nums;color:#e0e7ff}
+
+  /* Plans grid: two columns on desktop, one on mobile without shrinking content */
+  .plans-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr))}
+
+  /* Mobile nav behaviour */
+  #burger{display:none}
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr}
+    .contact-grid{grid-template-columns:1fr}
+    .menu{display:none;position:absolute;right:0;top:100%;background:rgba(6,9,20,.95);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px;flex-direction:column;gap:10px;width:min(90vw,320px)}
+    .menu.open{display:flex}
+    #burger{display:inline-flex}
+  }
 </style>
-</meta></head>
+</head>
 <body>
 <header>
-<div class="container nav">
-<a class="brand" href="#"><img alt="Logo Gimnasio Queen" height="65" src="logo.png" width="65"/><span>Gimnasio QUEEN</span></a>
-<nav class="menu" id="menu">
-<a class="badge" href="#servicios">Servicios</a>
-<a class="badge" href="#horarios">Horarios</a>
-<a class="badge" href="#planes">Planes</a>
-<a class="badge" href="#profes">Profes</a>
-<a class="badge" href="#contacto">Ubicación</a>
-<a class="btn" href="https://wa.me/5493537553668?text=Hola!%20Quiero%20info%20del%20gimnasio">WhatsApp</a>
-</nav>
-<button aria-label="Abrir menú" class="btn ghost" id="burger" style="display:none">Menú</button>
-</div>
+  <div class="container nav">
+    <a class="brand" href="#"><img src="logo.png" alt="Logo Gimnasio Queen" width="65" height="65"/><span>Gimnasio QUEEN</span></a>
+    <nav class="menu" id="menu">
+      <a class="badge" href="#servicios">Servicios</a>
+      <a class="badge" href="#horarios">Horarios</a>
+      <a class="badge" href="#planes">Planes</a>
+      <a class="badge" href="#profes">Profes</a>
+      <a class="badge" href="#contacto">Ubicación</a>
+      <a class="btn" href="https://wa.me/5493537553668?text=Hola!%20Quiero%20info%20del%20gimnasio">WhatsApp</a>
+    </nav>
+    <button class="btn ghost" id="burger" aria-label="Abrir menú">Menú</button>
+  </div>
 </header>
+
 <main>
 <section class="hero">
-<div class="container hero-grid">
-<div>
-<div class="kicker">Fitness, Bienestar y Actitud</div>
-<h1>Descubrí tu mejor <span style="color:#6fa7da">Versión</span></h1>
-<p style="font-size:18px;">Musculación, Funcional, Power, Spinning y Kimax. Profesores certificados, equipamiento completo y <b>horarios amplios</b>.
-<div style="display:flex;gap:12px;margin-top:14px">
-<a class="btn" href="#planes">Ver planes</a>
-<a class="btn ghost" href="#horarios">Ver horarios</a>
-</div>
-<div class="stats">
-</div>
-</div>
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Fitness, Bienestar y Actitud</div>
+      <h1>Descubrí tu mejor <span style="color:#6fa7da">Versión</span></h1>
+      <p style="font-size:18px;">Musculación, Funcional, Power, Spinning y Kimax. Profesores certificados, equipamiento completo y <b>horarios amplios</b>.</p>
+      <div style="display:flex;gap:12px;margin-top:14px;flex-wrap:wrap">
+        <a class="btn" href="#planes">Ver planes</a>
+        <a class="btn ghost" href="#horarios">Ver horarios</a>
+      </div>
+    </div>
 
-
-<div class="hero-card">
-  <video id="heroVideo" autoplay loop muted playsinline style="width:100%"; border-radius:14px>
-    <source src="videogym.mp4" type="video/mp4">
-  </video>
-</div>
-
-<script>
-  const vid = document.getElementById("heroVideo");
-  vid.playbackRate = 1.5;
-</script>
-
+    <div class="hero-card">
+      <div class="media-wrap">
+        <video id="heroVideo" autoplay loop muted playsinline>
+          <source src="videogym.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section id="servicios">
-<div class="container">
-<div class="section-title">
-<div class="title">Actividades y servicios</div>
-</div>
+  <div class="container">
+    <div class="section-title"><div class="title">Actividades y servicios</div></div>
+    <div class="grid cards">
+      <article class="card">
+        <h3>Musculación</h3>
+        <p>Entrenamiento de fuerza y tonificación con equipamiento completo y plan personalizado.</p>
+      </article>
 
-<div class="grid cards">
-<article class="card">
-<h3>Musculación</h3>
-<p>Entrenamiento de fuerza y tonificación con equipamiento completo y plan personalizado.</p>
-</article>
-<article class="card">
-<h3>Funcional</h3>
-<p>Circuitos intensivos que combinan fuerza, resistencia y cardio.</p>
-<p>
-  <a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/Um47PROVwbg')">
-    Conocé la actividad
-  </a>
-</p>
-<!-- Modal -->
-<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-     background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-<div style="position:relative; width:80%; max-width:800px;">
-<span onclick="closeModal()" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; cursor:pointer;">×</span>
-<iframe allowfullscreen="" frameborder="0" height="450" id="videoFrame" width="100%"></iframe>
-</div>
-</div>
-<script>
-function openModal(videoUrl) {
-  document.getElementById("videoFrame").src = videoUrl;
-  document.getElementById("videoModal").style.display = "flex";
-}
+      <article class="card">
+        <h3>Funcional</h3>
+        <p>Circuitos intensivos que combinan fuerza, resistencia y cardio.</p>
+        <p><a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/Um47PROVwbg')">Conocé la actividad</a></p>
+      </article>
 
-function closeModal() {
-  document.getElementById("videoFrame").src = "";
-  document.getElementById("videoModal").style.display = "none";
-}
-</script>
-</article>
-<article class="card">
-<h3>Spinning</h3>
-<p>Clases grupales con música y energía para mejorar tu resistencia y coordinación.</p>
-<p>
-<a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/jPmyfYC-vLY')">
-              Conocé la actividad
-            </a>
-</p>
-<!-- Modal -->
-<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-               background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-<div style="position:relative; width:80%; max-width:800px;">
-<span onclick="closeModal()" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; cursor:pointer;">×</span>
-<iframe allowfullscreen="" frameborder="0" height="450" id="videoFrame" width="100%"></iframe>
-</div>
-</div>
-<script>
-          function openModal(videoUrl) {
-            document.getElementById("videoFrame").src = videoUrl;
-            document.getElementById("videoModal").style.display = "flex";
-          }
-          
-          function closeModal() {
-            document.getElementById("videoFrame").src = "";
-            document.getElementById("videoModal").style.display = "none";
-          }
-          </script>
-</article>
-<article class="card">
-<h3>Power</h3>
-<p>Entrenamiento de alta intensidad con barras y cargas, enfocado en fuerza y resistencia muscular.</p>
-<p>
-<a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/ZWgFPO0knQE')">
-                  Conocé la actividad
-                </a>
-</p>
-<!-- Modal -->
-<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-                   background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-<div style="position:relative; width:80%; max-width:800px;">
-<span onclick="closeModal()" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; cursor:pointer;">×</span>
-<iframe allowfullscreen="" frameborder="0" height="450" id="videoFrame" width="100%"></iframe>
-</div>
-</div>
-<script>
-              function openModal(videoUrl) {
-                document.getElementById("videoFrame").src = videoUrl;
-                document.getElementById("videoModal").style.display = "flex";
-              }
-              
-              function closeModal() {
-                document.getElementById("videoFrame").src = "";
-                document.getElementById("videoModal").style.display = "none";
-              }
-              </script>
-</article>
-<article class="card">
-<h3>Kimax</h3>
-<p>Entrenamiento cardiovascular y de fuerza inspirado en artes marciales, ideal para mejorar resistencia y coordinación.</p>
-<p>
-<a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/y1exBccfTx4')">
-                  Conocé la actividad
-                </a>
-</p>
-<!-- Modal -->
-<div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-                   background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-<div style="position:relative; width:80%; max-width:800px;">
-<span onclick="closeModal()" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; cursor:pointer;">×</span>
-<iframe allowfullscreen="" frameborder="0" height="450" id="videoFrame" width="100%"></iframe>
-</div>
-</div>
-<script>
-              function openModal(videoUrl) {
-                document.getElementById("videoFrame").src = videoUrl;
-                document.getElementById("videoModal").style.display = "flex";
-              }
-              
-              function closeModal() {
-                document.getElementById("videoFrame").src = "";
-                document.getElementById("videoModal").style.display = "none";
-              }
-              </script>
-</article>
-</div>
-</div>
+      <article class="card">
+        <h3>Spinning</h3>
+        <p>Clases grupales con música y energía para mejorar tu resistencia y coordinación.</p>
+        <p><a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/jPmyfYC-vLY')">Conocé la actividad</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Power</h3>
+        <p>Entrenamiento de alta intensidad con barras y cargas, enfocado en fuerza y resistencia muscular.</p>
+        <p><a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/ZWgFPO0knQE')">Conocé la actividad</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Kimax</h3>
+        <p>Entrenamiento cardiovascular y de fuerza inspirado en artes marciales, ideal para mejorar resistencia y coordinación.</p>
+        <p><a style="color:white" href="#" onclick="openModal('https://www.youtube.com/embed/y1exBccfTx4')">Conocé la actividad</a></p>
+      </article>
+    </div>
+  </div>
 </section>
+
 <section id="horarios">
-<div class="container">
-<div class="section-title">
-<div class="title">Horarios</div>
-</div>
-<div class="card">
-<p class="hint">Musculación: <b>Lunes, Miércoles y Viernes 08:30–12:00</b> · <b>Lunes a Viernes 14:00–22:00</b>. Debajo, actividades grupales por día y horario.</p>
-<div class="grid day-cards" style="grid-template-columns:repeat(5,1fr)">
-<article class="card day">
-<h3 class="day-title">Lunes</h3>
-<div class="blocks">
-  <div class="block sala">
-    Musculación<br><span class="hora">08:30-12:00</span>
-  </div>
-  <div class="block sala">
-    Musculación<br><span class="hora">14:00–22:00</span>
-  </div>
-</div>
+  <div class="container">
+    <div class="section-title"><div class="title">Horarios</div></div>
+    <div class="card">
+      <p class="hint">Musculación: <b>Lunes, Miércoles y Viernes 08:30–12:00</b> · <b>Lunes a Viernes 14:00–22:00</b>. Debajo, actividades grupales por día y horario.</p>
+      <div class="grid day-cards">
+        <article class="card day">
+          <h3 class="day-title">Lunes</h3>
+          <div class="blocks">
+            <div class="block sala">Musculación<br><span class="hora">08:30-12:00</span></div>
+            <div class="block sala">Musculación<br><span class="hora">14:00–22:00</span></div>
+          </div>
+          <ul class="class-list">
+            <li><span class="t">16:00-17:00</span><span class="act">Funcional</span></li>
+            <li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
+          </ul>
+        </article>
 
-<ul class="class-list">
-<li><span class="t">16:00-17:00</span><span class="act">Funcional</span></li>
-<li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
-</ul>
-</article>
-<article class="card day">
-<h3 class="day-title">Martes</h3>
-<div class="blocks">
-<div class="block sala">
-  Musculación <br><span class="Hora">14:00–22:00</span>
-</div>
-</div>
-<ul class="class-list">
-<li><span class="t">14:00-15:00</span><span class="act">Funcional</span></li>
-<li><span class="t">16:30-17:30</span><span class="act">Kimax</span></li>
-<li><span class="t">20:00-21:00</span><span class="act">Power</span></li>
-</ul>
-</article>
-<article class="card day">
-<h3 class="day-title">Miércoles</h3>
-<div class="blocks">
-  <div class="block sala">
-    Musculación<br><span class="hora">08:30–12:00</span>
+        <article class="card day">
+          <h3 class="day-title">Martes</h3>
+          <div class="blocks">
+            <div class="block sala">Musculación<br><span class="hora">14:00–22:00</span></div>
+          </div>
+          <ul class="class-list">
+            <li><span class="t">14:00-15:00</span><span class="act">Funcional</span></li>
+            <li><span class="t">16:30-17:30</span><span class="act">Kimax</span></li>
+            <li><span class="t">20:00-21:00</span><span class="act">Power</span></li>
+          </ul>
+        </article>
+
+        <article class="card day">
+          <h3 class="day-title">Miércoles</h3>
+          <div class="blocks">
+            <div class="block sala">Musculación<br><span class="hora">08:30–12:00</span></div>
+            <div class="block sala">Musculación<br><span class="hora">14:00-22:00</span></div>
+          </div>
+          <ul class="class-list">
+            <li><span class="t">16:00-17:00</span><span class="act">Funcional</span></li>
+            <li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
+          </ul>
+        </article>
+
+        <article class="card day">
+          <h3 class="day-title">Jueves</h3>
+          <div class="blocks">
+            <div class="block sala">Musculación<br><span class="hora">14:00–22:00</span></div>
+          </div>
+          <ul class="class-list">
+            <li><span class="t">14:00-15:00</span><span class="act">Funcional</span></li>
+            <li><span class="t">20:00-21:00</span><span class="act">Power</span></li>
+          </ul>
+        </article>
+
+        <article class="card day">
+          <h3 class="day-title">Viernes</h3>
+          <div class="blocks">
+            <div class="block sala">Musculación<br><span class="hora">08:30–12:00</span></div>
+            <div class="block sala">Musculación<br><span class="hora">14:00–22:00</span></div>
+          </div>
+          <ul class="class-list">
+            <li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </div>
-  <div class="block sala">
-    Musculación<br><span class="hora">14:00-22:00</span>
-  </div>
-<ul class="class-list">
-<li><span class="t">16:00-17:00</span><span class="act">Funcional</span></li>
-<li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
-</ul>
-</article>
-<article class="card day">
-<h3 class="day-title">Jueves</h3>
-<div class="blocks">
-<div class="block sala">
-  Musculación <br><span class="Hora">14:00–22:00</span> </div>
-</div>
-<ul class="class-list">
-<li><span class="t">14:00-15:00</span><span class="act">Funcional</span></li>
-<li><span class="t">20:00-21:00</span><span class="act">Power</span></li>
-</ul>
-</article>
-<article class="card day">
-<h3 class="day-title">Viernes</h3>
-<div class="blocks">
-  <div class="block sala">
-    Musculación<br><span class="hora">08:30–12:00</span>
-  </div>
-  <div class="block sala">
-    Musculación<br><span class="hora">14:00–22:00</span>
-  </div>
-</div>
-<ul class="class-list">
-<li><span class="t">20:00-21:00</span><span class="act">Spinning</span></li>
-</ul>
-</article>
-</div>
-</div>
-</div>
 </section>
+
 <section id="planes">
-<div class="container">
-<div class="section-title">
-<div class="title">Planes y precios</div>
-<span class="pill">Cuotas Agosto 2025</span>
-</div>
-<div class="grid cards" style="grid-template-columns:repeat(2,1fr)">
-<!-- SALA DE APARATOS -->
-<div class="card">
-<h3>Sala de aparatos</h3>
-<p>Acceso a sala de musculación.</p>
-<table aria-label="Sala de aparatos">
-<tbody>
-<tr><td>Precio por 1 día</td><td style="text-align:right"><b>$4.000</b></td></tr>
-<tr><td>3 días x semana — cuota mensual</td><td style="text-align:right"><b>$ 28.000</b></td></tr>
-<tr><td>5 días x semana — cuota mensual</td><td style="text-align:right"><b>$ 31.000</b></td></tr>
-<tr><td>1/2 mes — 5 días x semana</td><td style="text-align:right"><b>$ 28.000</b></td></tr>
-</tbody>
-</table>
-<div style="margin-top:10px">
-<a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Sala%20de%20aparatos">Consultar</a>
-</div>
-</div>
-<!-- COMBOS SALA + POWER -->
-<div class="card">
-<h3>Combos: Sala + POWER</h3>
-<p>Clases aeróbicas POWER + acceso a sala.</p>
-<table aria-label="Combos Sala + Power">
-<tbody>
-<tr><td>Precio por 1 clase (aeróbica)</td><td style="text-align:right"><b>$ 4.000</b></td></tr>
-<tr><td>2 clases x semana — cuota mensual</td><td style="text-align:right"><b>$28.000</b></td></tr>
-<tr><td>3 clases x semana — cuota mensual</td><td style="text-align:right"><b>$30.000</b></td></tr>
-<tr><td>4 clases x semana — cuota mensual</td><td style="text-align:right"><b>$31.000</b></td></tr>
-<tr><td>5 clases x semana — cuota mensual</td><td style="text-align:right"><b>$32.000</b></td></tr>
-</tbody>
-</table>
-<div style="margin-top:10px">
-<a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Power%20%2B%20Sala">Consultar</a>
-</div>
-</div>
-<!-- COMBOS SALA + TOP RIDE -->
-<div class="card">
-<h3>Combos: Sala + TOP RIDE</h3>
-<p>Clases de Top Ride combinadas con sala.</p>
-<table aria-label="Combos Sala + Top Ride">
-<tbody>
-<tr><td>Precio por 1 clase Top Ride</td><td style="text-align:right"><b>$ 4.000</b></td></tr>
-<tr><td>1 día Top Ride + 1 día cualquiera (2 días) — mensual</td><td style="text-align:right"><b>$28.500</b></td></tr>
-<tr><td>1 día Top Ride + 2 días cualquiera (3 días)</td><td style="text-align:right"><b>$30.500</b></td></tr>
-<tr><td>1 día Top Ride + 3 días cualquiera (4 días)</td><td style="text-align:right"><b>$31.500</b></td></tr>
-<tr><td>1 día Top Ride + 4 días cualquiera (5 días)</td><td style="text-align:right"><b>$32.500</b></td></tr>
-<tr><td>2 días Top Ride + 1 día cualquiera (3 días)</td><td style="text-align:right"><b>$31.000</b></td></tr>
-<tr><td>2 días Top Ride + 2 días cualquiera (4 días)</td><td style="text-align:right"><b>$32.000</b></td></tr>
-<tr><td>2 días Top Ride + 3 días cualquiera (5 días)</td><td style="text-align:right"><b>$33.000</b></td></tr>
-<tr><td>3 días Top Ride + 1 día cualquiera (4 días)</td><td style="text-align:right"><b>$33.000</b></td></tr>
-<tr><td>3 días Top Ride + 2 días cualquiera (5 días)</td><td style="text-align:right"><b>$34.000</b></td></tr>
-</tbody>
-</table>
-<div style="margin-top:10px">
-<a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Top%20Ride%20%2B%20Sala">Consultar</a>
-</div>
-</div>
-<!-- DISCIPLINAS AERÓBICAS Y OTROS -->
-<div class="card">
-<h3>Disciplinas aeróbicas &amp; otros</h3>
-<p>Programas Radical + servicios adicionales.</p>
-<table aria-label="Disciplinas aeróbicas">
-<tbody>
-<tr><td>Radical Power — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
-<tr><td>Radical Kimax — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
-<tr><td>Radical U-Bound — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
-<tr><td>Radical Top Ride — 3 clases x semana</td><td style="text-align:right"><b>$31.500</b></td></tr>
-<tr><td>Pilates Reformer — 2 clases x semana</td><td style="text-align:right"><b>$33.000</b></td></tr>
-<tr><td>Masoterapia / masajes — sesión de 1 hora</td><td style="text-align:right"><b>$23.000</b></td></tr>
-</tbody>
-</table>
-<div style="margin-top:10px">
-<a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20disciplinas%20aer%C3%B3bicas%20y%20otros">Consultar</a>
-</div>
-</div>
-</div>
-<p style="margin-top:10px;color:#9ca3af;font-size:12px">*Precios vigentes a Agosto 2025. Sujetos a cambios sin previo aviso.</p>
-</div>
+  <div class="container">
+    <div class="section-title">
+      <div class="title">Planes y precios</div>
+      <span class="pill">Cuotas Agosto 2025</span>
+    </div>
+
+    <div class="plans-grid">
+      <div class="card">
+        <h3>Sala de aparatos</h3>
+        <p>Acceso a sala de musculación.</p>
+        <table aria-label="Sala de aparatos">
+          <tbody>
+            <tr><td>Precio por 1 día</td><td style="text-align:right"><b>$4.000</b></td></tr>
+            <tr><td>3 días x semana — cuota mensual</td><td style="text-align:right"><b>$ 28.000</b></td></tr>
+            <tr><td>5 días x semana — cuota mensual</td><td style="text-align:right"><b>$ 31.000</b></td></tr>
+            <tr><td>1/2 mes — 5 días x semana</td><td style="text-align:right"><b>$ 28.000</b></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px">
+          <a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Sala%20de%20aparatos">Consultar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Combos: Sala + POWER</h3>
+        <p>Clases aeróbicas POWER + acceso a sala.</p>
+        <table aria-label="Combos Sala + Power">
+          <tbody>
+            <tr><td>Precio por 1 clase (aeróbica)</td><td style="text-align:right"><b>$ 4.000</b></td></tr>
+            <tr><td>2 clases x semana — cuota mensual</td><td style="text-align:right"><b>$28.000</b></td></tr>
+            <tr><td>3 clases x semana — cuota mensual</td><td style="text-align:right"><b>$30.000</b></td></tr>
+            <tr><td>4 clases x semana — cuota mensual</td><td style="text-align:right"><b>$31.000</b></td></tr>
+            <tr><td>5 clases x semana — cuota mensual</td><td style="text-align:right"><b>$32.000</b></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px">
+          <a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Power%20%2B%20Sala">Consultar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Combos: Sala + TOP RIDE</h3>
+        <p>Clases de Top Ride combinadas con sala.</p>
+        <table aria-label="Combos Sala + Top Ride">
+          <tbody>
+            <tr><td>Precio por 1 clase Top Ride</td><td style="text-align:right"><b>$ 4.000</b></td></tr>
+            <tr><td>1 día Top Ride + 1 día cualquiera (2 días) — mensual</td><td style="text-align:right"><b>$28.500</b></td></tr>
+            <tr><td>1 día Top Ride + 2 días cualquiera (3 días)</td><td style="text-align:right"><b>$30.500</b></td></tr>
+            <tr><td>1 día Top Ride + 3 días cualquiera (4 días)</td><td style="text-align:right"><b>$31.500</b></td></tr>
+            <tr><td>1 día Top Ride + 4 días cualquiera (5 días)</td><td style="text-align:right"><b>$32.500</b></td></tr>
+            <tr><td>2 días Top Ride + 1 día cualquiera (3 días)</td><td style="text-align:right"><b>$31.000</b></td></tr>
+            <tr><td>2 días Top Ride + 2 días cualquiera (4 días)</td><td style="text-align:right"><b>$32.000</b></td></tr>
+            <tr><td>2 días Top Ride + 3 días cualquiera (5 días)</td><td style="text-align:right"><b>$33.000</b></td></tr>
+            <tr><td>3 días Top Ride + 1 día cualquiera (4 días)</td><td style="text-align:right"><b>$33.000</b></td></tr>
+            <tr><td>3 días Top Ride + 2 días cualquiera (5 días)</td><td style="text-align:right"><b>$34.000</b></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px">
+          <a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20Top%20Ride%20%2B%20Sala">Consultar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Disciplinas aeróbicas &amp; otros</h3>
+        <p>Programas Radical + servicios adicionales.</p>
+        <table aria-label="Disciplinas aeróbicas">
+          <tbody>
+            <tr><td>Radical Power — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
+            <tr><td>Radical Kimax — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
+            <tr><td>Radical U-Bound — 2 clases x semana</td><td style="text-align:right"><b>$28.000</b></td></tr>
+            <tr><td>Radical Top Ride — 3 clases x semana</td><td style="text-align:right"><b>$31.500</b></td></tr>
+            <tr><td>Pilates Reformer — 2 clases x semana</td><td style="text-align:right"><b>$33.000</b></td></tr>
+            <tr><td>Masoterapia / masajes — sesión de 1 hora</td><td style="text-align:right"><b>$23.000</b></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px">
+          <a target="_blank" class="btn" href="https://wa.me/5493537553668?text=Quiero%20info%20de%20disciplinas%20aer%C3%B3bicas%20y%20otros">Consultar</a>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:10px;color:#9ca3af;font-size:12px">*Precios vigentes a Agosto 2025. Sujetos a cambios sin previo aviso.</p>
+  </div>
 </section>
+
 <section id="profes">
-<div class="container">
-<div class="section-title">
-<div class="title">Nuestro equipo</div>
-</div>
-<div class="grid trainers">
-<div class="card trainer">
-<img alt="Fabián - Musculación, Power, Kimax y Spinning" src="Profe Fabián.jpeg"/>
-<h4>Fabian</h4><p>Musculación, Power, Kimax y Spinning</p>
-</div>
-<div class="card trainer">
-<img  alt="Joaquin - Funcional y Musculación" src="Profe Joaquín.jpeg"/>
-<h4>Joaquín</h4><p>Funcional y Musculación</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-title"><div class="title">Nuestro equipo</div></div>
+    <div class="grid trainers">
+      <div class="card trainer">
+        <img src="Profe Fabián.jpeg" alt="Fabián - Musculación, Power, Kimax y Spinning"/>
+        <h4>Fabian</h4><p>Musculación, Power, Kimax y Spinning</p>
+      </div>
+      <div class="card trainer">
+        <img src="Profe Joaquín.jpeg" alt="Joaquin - Funcional y Musculación"/>
+        <h4>Joaquín</h4><p>Funcional y Musculación</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="contacto">
-<div class="container">
-<div class="section-title">
-<div class="title">Ubicación</div>
-<a class="btn" href="https://wa.me/5493537553668?text=Hola!%20Quiero%20informaci%C3%B3n%20del%20gimnasio">Escribir por WhatsApp</a>
-</div>
-</form>
-<div class="card">
-<p><b>Dirección:</b> Int. Viqueira 57, Bell Ville, Córdoba</p>
-<p><b>Horario:</b> Lun-Mie-Vie 08:30–12hs / Lun a Vie 14:00-22hs</p>
-<p><b>Tel:</b> 3537-553668 · <b>IG:</b> @gimnasio.queen</p>
-<iframe allowfullscreen="" height="450" width="1000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.136784858678!2d-62.69622302360784!3d-32.62918065592625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cbfa508f7e6131%3A0xe9c24d0d4771b179!2sInt.%20Viqueira%2057%2C%20X2550%20Bell%20Ville%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1754953744435!5m2!1ses-419!2sar" style="border:0;" width="600">
-</iframe>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-title">
+      <div class="title">Ubicación</div>
+      <a class="btn" href="https://wa.me/5493537553668?text=Hola!%20Quiero%20informaci%C3%B3n%20del%20gimnasio">Escribir por WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <p><b>Dirección:</b> Int. Viqueira 57, Bell Ville, Córdoba</p>
+      <p><b>Horario:</b> Lun-Mie-Vie 08:30–12hs / Lun a Vie 14:00-22hs</p>
+      <p><b>Tel:</b> 3537-553668 · <b>IG:</b> @gimnasio.queen</p>
+      <div class="media-wrap">
+        <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.136784858678!2d-62.69622302360784!3d-32.62918065592625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cbfa508f7e6131%3A0xe9c24d0d4771b179!2sInt.%20Viqueira%2057%2C%20X2550%20Bell%20Ville%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1754953744435!5m2!1ses-419!2sar">
+        </iframe>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
+
 <footer>
-<div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-<div>© <span id="year"></span> Gimnasio Queen. Todos los derechos reservados.</div>
-</div>
+  <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© <span id="year"></span> Gimnasio Queen. Todos los derechos reservados.</div>
+  </div>
 </footer>
+
+<!-- Scripts -->
 <script>
   // Año dinámico y menú móvil
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -547,8 +378,30 @@ function closeModal() {
   }
   burger.addEventListener('click', ()=>menu.classList.toggle('open'));
   window.addEventListener('resize', check); check();
+
+  // Video speed
+  const vid = document.getElementById("heroVideo");
+  if (vid) vid.playbackRate = 1.5;
+
+  // Modal único para videos
+  const modal = document.createElement('div');
+  modal.id = 'videoModal';
+  modal.style.cssText = 'display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center; z-index:100';
+  modal.innerHTML = '<div style="position:relative; width:90%; max-width:800px;"><span id="closeModal" style="position:absolute; top:-30px; right:0; font-size:30px; color:white; cursor:pointer;">×</span><iframe id="videoFrame" width="100%" height="450" frameborder="0" allowfullscreen></iframe></div>';
+  document.body.appendChild(modal);
+  window.openModal = function(videoUrl){
+    document.getElementById("videoFrame").src = videoUrl;
+    modal.style.display = "flex";
+  }
+  function closeModal(){
+    document.getElementById("videoFrame").src = "";
+    modal.style.display = "none";
+  }
+  document.getElementById('closeModal').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{ if(e.target.id==='videoModal') closeModal(); });
 </script>
-<!-- Schema.org LocalBusiness -->
+
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
